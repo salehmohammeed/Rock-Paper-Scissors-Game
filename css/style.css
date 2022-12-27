@@ -55,12 +55,36 @@
     border: none;
     background-color: rgba(0, 0, 0, 0.8);
 }
+@media (max-width:767px) {
+    .container {
+        height:110vh;
+        width: 80%;
+    }
+    .container h1 {
+        font-size: 20px;
+    }
+    .container .option .button {
+        flex-direction: column;
+    }
+    .container .option .button button ,
+.container .winner button{
+    width: 70%;
+    margin: 10px auto;
+}
+}
 .container .TheImages {
     display: flex;
     justify-content: space-around;
     padding: 30px 0px ;
     position: relative;
     z-index: 2;
+}
+@media (max-width:991px){
+    .container .TheImages {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .container .TheImages div{
     background-color: rgba(0, 0, 0, 0.6);
@@ -120,6 +144,15 @@
     animation: right-move 0.5s linear forwards;
     transition-delay: 0.5s;
   }
+  @media (max-width:767px) {
+    .container .TheImages div{
+        margin: 10px 0px;
+        width: 290px;
+    }
+    .container .winner p {
+        font-size: 15px;
+    }
+}
 @keyframes left-move {
     50% {
         left: 0;

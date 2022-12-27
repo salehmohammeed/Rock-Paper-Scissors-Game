@@ -10,7 +10,7 @@ function chooseImg(imgNum){
     playerImgNum = imgNum ;
     option.style.display = "none"
     playerImg.src = `img/${images[imgNum]}.jpg`
-    randomizeImages()
+    setTimeout(()=>randomizeImages(),200);
 }
 function randomizeImages (){
     let randomIndex = Math.floor(Math.random()*images.length)
